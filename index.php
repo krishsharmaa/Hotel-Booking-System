@@ -1,11 +1,37 @@
-<?php include 'includes/header.php'; ?>
+<link rel="stylesheet" href="css/style.css">
 
-<div class="container mt-5 text-center">
-    <h1>Welcome to Online Hotel Booking System</h1>
-    <a href="hotels.php" class="btn btn-primary me-2 mb-2">View Hotels</a>
-    <a href="user/login.php" class="btn btn-outline-primary me-2 mb-2">User Login</a>
-    <a href="user/register.php" class="btn btn-outline-success me-2 mb-2">Register</a>
-    <a href="admin/login.php" class="btn btn-secondary mb-2">Admin Login</a>
+<div class="hero-section">
+
+    <div class="hero-content">
+
+        <h1>ELITE HEAVEN HOTEL</h1>
+
+        <p>Luxury Stay & Premium Comfort</p>
+
+        <div class="hero-buttons">
+
+            <a href="hotels.php"
+               class="btn btn-primary btn-lg">
+               View Hotels
+            </a>
+
+            <a href="user/login.php"
+               class="btn btn-outline-light btn-lg">
+               User Login
+            </a>
+
+            <a href="user/register.php"
+               class="btn btn-success btn-lg">
+               Register
+            </a>
+
+            <a href="admin/login.php"
+               class="btn btn-dark btn-lg">
+               Admin Login
+            </a>
+
+        </div>
+
+    </div>
+
 </div>
-
-<?php include 'includes/footer.php'; ?>
