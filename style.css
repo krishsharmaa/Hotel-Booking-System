@@ -1,3 +1,137 @@
 body{
     font-family: Arial;
 }
+
+.hero-section{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)),
+    url('../images/hotel.jpg.jpeg');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-content h1{
+    font-size:60px;
+    font-weight:bold;
+}
+
+.hero-content p{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.hero-buttons a{
+    margin:10px;
+    font-weight:bold;
+    border-radius:5px;
+    padding:12px 30px;
+    font-size:16px;
+    transition: all 0.3s ease;
+}
+
+.hero-buttons .btn-primary{
+    background-color:#FF6B35;
+    border-color:#FF6B35;
+    color:white;
+}
+
+.hero-buttons .btn-primary:hover{
+    background-color:#E55A24;
+    border-color:#E55A24;
+}
+
+.hero-buttons .btn-outline-light{
+    background-color:#4ECDC4;
+    border-color:#4ECDC4;
+    color:white;
+}
+
+.hero-buttons .btn-outline-light:hover{
+    background-color:#3BA99F;
+    border-color:#3BA99F;
+}
+
+.hero-buttons .btn-success{
+    background-color:#1DD1A1;
+    border-color:#1DD1A1;
+    color:white;
+}
+
+.hero-buttons .btn-success:hover{
+    background-color:#10AC84;
+    border-color:#10AC84;
+}
+
+.hero-buttons .btn-dark{
+    background-color:#FFD93D;
+    border-color:#FFD93D;
+    color:#333;
+}
+
+.hero-buttons .btn-dark:hover{
+    background-color:#FFC300;
+    border-color:#FFC300;
+}
+
+/* Hotel Cards Styling */
+.card{
+    border:none;
+    border-radius:10px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.1);
+    transition:transform 0.3s ease, box-shadow 0.3s ease;
+    overflow:hidden;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 8px 16px rgba(0,0,0,0.2);
+}
+
+.card-img-top{
+    height:250px;
+    object-fit:cover;
+    transition:transform 0.3s ease;
+}
+
+.card:hover .card-img-top{
+    transform:scale(1.05);
+}
+
+.card-body{
+    padding:20px;
+    background-color:#f9f9f9;
+}
+
+.card-title{
+    color:#FF6B35;
+    font-weight:bold;
+    font-size:20px;
+    margin-bottom:10px;
+}
+
+.card-text{
+    color:#666;
+    font-size:14px;
+    margin-bottom:15px;
+}
+
+.card .btn-primary{
+    background-color:#FF6B35;
+    border-color:#FF6B35;
+    width:100%;
+    font-weight:bold;
+    border-radius:5px;
+}
+
+.card .btn-primary:hover{
+    background-color:#E55A24;
+    border-color:#E55A24;
+}
+}
