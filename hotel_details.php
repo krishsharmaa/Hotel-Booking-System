@@ -15,6 +15,23 @@ function getHotelImageSrc($image) {
     return 'images/' . ltrim($trimmed, '/\\');
 }
 
+function getRoomImageSrc($roomImage, $roomType) {
+    if (!empty($roomImage)) {
+        return getHotelImageSrc($roomImage);
+    }
+
+    $lowerType = strtolower($roomType);
+    if (strpos($lowerType, 'deluxe') !== false) {
+        return 'https://plus.unsplash.com/premium_photo-1661964071015-d97428970584?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aG90ZWxzfGVufDB8fDB8fHww';
+    }
+
+    if (strpos($lowerType, 'standard') !== false) {
+        return 'images/hotel.jpg.jpeg';
+    }
+
+    return 'https://via.placeholder.com/400x250?text=Room+Image';
+}
+
 $hotelId = isset($_GET['id']) ? (int) $_GET['id'] : 0;
 $message = '';
 $error = '';
@@ -109,6 +126,7 @@ include 'includes/header.php';
             <?php while ($room = mysqli_fetch_assoc($roomsResult)): ?>
                 <div class="col-md-4 mb-4">
                     <div class="card h-100">
+                        <img src="<?= htmlspecialchars(getRoomImageSrc($room['image'] ?? '', $room['room_type'])) ?>" class="card-img-top" alt="<?= htmlspecialchars($room['room_type']) ?>">
                         <div class="card-body">
                             <h5 class="card-title"><?= htmlspecialchars($room['room_type']) ?></h5>
                             <p class="card-text">
